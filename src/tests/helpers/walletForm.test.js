@@ -1,34 +1,28 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-// import WalletForm from '../../components/WalletForm';
+import { act } from 'react-dom/test-utils';
 import { renderWithRouterAndRedux } from './renderWith';
 import Wallet from '../../pages/Wallet';
+import mockData from './mockData';
 
-test('teste se o componente Wallet renderiza um campo para adicionar valor da despesa e se ele recebe um valor', () => {
-  renderWithRouterAndRedux(<Wallet />);
-
-  const inputValor = screen.getByTestId('value-input');
-  expect(inputValor).toBeInTheDocument();
-
-  userEvent.type(inputValor, '20');
+beforeEach(() => {
+  jest.spyOn(global, 'fetch').mockResolvedValue({
+    json: () => mockData,
+  });
 });
 
-// test('teste se há um campo para selecionar em qual moeda será registrada a despesa', () => {
-//   renderWithRouterAndRedux(<WalletForm />);
+test('teste o componente Wallet', async () => {
+  await act(() => {
+    renderWithRouterAndRedux(<Wallet />);
+  });
+  const array = [];
+  screen.getByTestId('currency-input').childNodes.forEach((e) => {
+    array.push(e.innerHTML);
+  });
 
-//   const inputDespesa = screen.getByTestId('currency-input');
-
-//   expect(inputDespesa).toBeInTheDocument();
-// });
-
-// test('teste se há um campo para adicionar qual método de pagamento será utilizado', () => {
-//   renderWithRouterAndRedux(<WalletForm />);
-
-//   const moeda = screen.getByTestId('currency-input');
-
-//   expect(moeda).toBeInTheDocument();
-// });
+  expect(array).toEqual(Object.keys(mockData).filter((key) => key !== 'USDT'));
+});
 
 test('verifique se é renderizado um botão na tela e se ao clicar é chamada a função handleClick ', () => {
   renderWithRouterAndRedux(<Wallet />);
@@ -42,3 +36,19 @@ test('verifique se é renderizado um botão na tela e se ao clicar é chamada a 
   const inputDescricao = screen.getByTestId('description-input');
   userEvent.type(inputDescricao, 'comida');
 });
+
+// test('testar se há um campo para selecionar em qual moeda será registrada a despesa', () => {
+//   renderWithRouterAndRedux(<Wallet />);
+
+//   const inputmoeda = screen.getByTestId('currency-input');
+
+//   expect(inputDespesa).toBeInTheDocument();
+// });
+
+// test('teste se há um campo para adicionar qual método de pagamento será utilizado', () => {
+//   renderWithRouterAndRedux(<WalletForm />);
+
+//   const moeda = screen.getByTestId('currency-input');
+
+//   expect(moeda).toBeInTheDocument();
+// });
