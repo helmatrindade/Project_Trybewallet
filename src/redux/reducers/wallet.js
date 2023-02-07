@@ -1,4 +1,5 @@
 import { GET_MOEDA, GET_MOEDA_INFO } from '../actions/moeda';
+import { ACTION_DELETE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -21,6 +22,11 @@ const wallet = (state = INITIAL_STATE, action) => {
         ...state.expenses,
         action.payload,
       ],
+    };
+  case ACTION_DELETE:
+    return {
+      ...state,
+      expenses: [...state.expenses.filter((expense) => expense.id !== action.id)],
     };
   default:
     return state;

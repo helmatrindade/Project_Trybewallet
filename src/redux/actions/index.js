@@ -8,6 +8,13 @@ import {
   GET_MOEDA,
 } from './moeda';
 
+const ACTION_DELETE = 'ACTION_DELETE';
+
+const actionDelete = (id) => ({
+  type: ACTION_DELETE,
+  id,
+});
+
 export {
   EMAIL_USER,
   getEmail,
@@ -17,4 +24,6 @@ export {
   disparaActionMoeda,
   disparaActionMoedaInfo,
   GET_MOEDA_INFO,
+  ACTION_DELETE,
+  actionDelete,
 };
