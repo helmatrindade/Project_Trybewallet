@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../styles/Header.css';
 
 class Header extends Component {
   totalSomaDespesas = () => {
@@ -18,14 +19,16 @@ class Header extends Component {
   render() {
     const { email } = this.props;
     return (
-      <header>
-        <div>
-          <p data-testid="email-field">{email}</p>
-          <p data-testid="total-field">
+      <header className="header">
+        <p className="logo">💸 TrybeWallet</p>
+        <div className="despesas">
+          <p className="titulo-despesa">💰 Total de despesas:</p>
+          <p className="total" data-testid="total-field">
             {parseFloat(this.totalSomaDespesas()).toFixed(2)}
           </p>
-          <p data-testid="header-currency-field">BRL</p>
+          <p className="total" data-testid="header-currency-field">BRL</p>
         </div>
+        <p className="email" data-testid="email-field">{email}</p>
       </header>
     );
   }

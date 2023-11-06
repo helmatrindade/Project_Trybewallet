@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+}
+
+.despesas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  gap: 0.5rem;
+}
+
+.titulo-despesa {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(116, 14, 102);
+}
+
+.total {
+  color: rgb(116, 14, 102);
+}
+
+
+.logo {
+  font-size: 50px;
+  color: #5243f9;
+  font-weight: bolder;
+}
+
+.email {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #830b81;
+}

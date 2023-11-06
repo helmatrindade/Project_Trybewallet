@@ -1,0 +1,44 @@
+.tudo-aqui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-wallet {
+  background-color: rgb(251, 251, 251);
+  width: 70%;
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.body-tabela {
+  background-color: rgb(116, 14, 102);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+  padding: 0 20px;
+  width: 90%;
+  border-radius: 20px;
+  height: 60vh;
+}
+
+.div-1 {
+  height: 20vh;
+  width: 100%;
+}
+
+.div-2 {
+ height: 40vh;
+ width: 100%;
+}

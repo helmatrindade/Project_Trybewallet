@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actionDelete } from '../redux/actions';
+import '../styles/Table.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 class Table extends Component {
   btnDeletar = (id) => {
@@ -13,7 +15,7 @@ class Table extends Component {
     const { expenses } = this.props;
 
     return (
-      <table>
+      <table className="descr-tabela">
         <thead>
           <tr>
             <th>Descrição</th>
@@ -35,7 +37,7 @@ class Table extends Component {
           const value = Number(expense.value);
           const { name } = obj[1];
           return (
-            <tbody key={ expense.id }>
+            <tbody key={ expense.id } className="tabe">
               <tr>
                 <td>{expense.description}</td>
                 <td>{ expense.tag }</td>
@@ -49,9 +51,10 @@ class Table extends Component {
                   <button
                     type="button"
                     data-testid="delete-btn"
+                    className="btn-deletar"
                     onClick={ () => this.btnDeletar(expense.id) }
                   >
-                    Deletar
+                    <i className="fa fa-trash" />
                   </button>
                 </td>
               </tr>

@@ -1,0 +1,40 @@
+.descr-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.descr-tabela th , .descr-tabela td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.descr-tabela th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.descr-tabela tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.descr-tabela tr:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-deletar {
+  background-color: rgb(248, 248, 248);
+  color: rgb(28, 28, 28);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.tabe {
+  background-color: rgb(255, 254, 254);
+}
