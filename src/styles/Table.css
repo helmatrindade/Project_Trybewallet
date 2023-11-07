@@ -1,8 +1,8 @@
 .descr-tabela {
-  width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
   font-family: Arial, sans-serif;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .descr-tabela th , .descr-tabela td {
@@ -16,7 +16,7 @@
   font-weight: bold;
 }
 
-.descr-tabela tr:nth-child(even) {
+.descr-tabela tr:nth-child( even ) {
   background-color: #f2f2f2;
 }
 
@@ -26,13 +26,13 @@
 
 .btn-deletar {
   background-color: rgb(248, 248, 248);
-  color: rgb(28, 28, 28);
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
+  color: rgb(28, 28, 28);
   cursor: pointer;
-  width: 30px;
   height: 30px;
+  padding: 5px 10px;
+  width: 30px;
 }
 
 .tabe {
