@@ -15,6 +15,15 @@ Neste projeto, desenvolvi uma carteira de controle de gastos com um conversor de
 - Conectar o Redux aos componentes React para manter uma interface de usuário reativa e atualizada.
 - Implementar _actions_ assíncronas em minha aplicação React que faz uso do Redux para aprimorar a experiência do usuário.
 
+### Tecnologias e Ferramentas
+<div>
+  <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black' alt='JavaScript' />
+   <img src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white' alt='HTML' />
+    <img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' alt='CSS3' />
+    <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' alt='ReactJS' />
+  <img src='https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white' alt='Redux' />
+</div>
+
 ### ☕ Usando TrybeWallet
 
 Para usar TrybeWallet, siga estas etapas:
